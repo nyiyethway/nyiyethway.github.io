@@ -8,17 +8,17 @@
 </head>
 <body>
     
-<div style="background-color: greenyellow; stroke-width: 1000cm;">
+<div style="background-color: lightblue; stroke-width: 1000cm;">
     <p>
 
         <h3>Welcome to Rio Supermarket!!!!</h3>
-        <a href="home">Home</a>
-        <a href="about">About</a>
-        <a href="products">Products</a>
-        <a href="contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="../shop/prj/about.html">About</a>
+        <a href="../shop/prj/products.html">Products</a>
+        <a href="../shop/prj/contact.html">Contact</a>
 
 
-<a href="menu" >Menu</a>
+
 
 
 
@@ -51,27 +51,50 @@
         <h3>Registration Form </h3>
         <form action="register.php" method="get" enctype="multipart/form-data">
         <input type="hidden" name="id" value="45">
-           <input type="text" name="voucher_id" value="123" disabled="disabled"><br>
+           <input type="text" name="voucher_id" value="REF:07894561118" disabled="disabled"><br>
+           
+<img src="../shop/image/Rio Supermarket logo.jpg" alt="">
+
+
+
            <fieldset>
-             <legend>Personal Info</legend>
-            <label for="name">Name: </label>
-            <input type="text" name="name" id="name" minlength="5" 
-            maxlength="50" > <br>
+            <legend>Company Info</legend>
+           <p>Our Company was established at 1994 Nov11.Our supermarket is a self-service shop offering a wide variety of food, beverages and household products, organized into sections. This kind of store is larger and has a wider selection than earlier grocery stores, but is smaller and more limited in the range of merchandise than a hypermarket or big-box market. In everyday U.S. usage, however, "grocery store" is synonymous with supermarket,[1] and is not used to refer to other types of stores that sell groceries.[2][1]
+    
+            The supermarket typically has places for fresh meat, fresh produce, dairy, deli items, baked goods, etc. Shelf space is also reserved for canned and packaged goods and for various non-food items such as kitchenware, household cleaners, pharmacy products and pet supplies. Some supermarkets also sell other household products that are consumed regularly, such as alcohol (where permitted), medicine, and clothing, and some sell a much wider range of non-food products: DVDs, sporting equipment, board games, and seasonal items (e.g., Christmas wrapping paper in December).
+            
+            A larger full-service supermarket combined with a department store is sometimes known as a hypermarket. Other services may include those of banks, cafés, childcare centers/creches, insurance (and other financial services), mobile phone services, photo processing, video rentals, pharmacies, and gas stations. If the eatery in a supermarket is substantial enough, the facility may be called a "grocerant", a blend of "grocery" and "restaurant".[3]
+            
+            The traditional supermarket occupies a large amount of floor space, usually on a single level. It is usually situated near a residential area in order to be convenient to consumers. The basic appeal is the availability of a broad selection of goods under a single roof, at relatively low prices. Other advantages include ease of parking and frequently the convenience of shopping hours that extend into the evening or even 24 hours of the day. Supermarkets usually allocate large budgets to advertising, typically through newspapers. They also present elaborate in-shop displays of products.
+            
+            Supermarkets typically are chain stores, supplied by the distribution centers of their parent companies, thus increasing opportunities for economies of scale. Supermarkets usually offer products at relatively low prices by using their buying power to buy goods from manufacturers at lower prices than smaller stores can. They also minimise financing costs by paying for goods at least 30 days after receipt and some extract credit terms of 90 days or more from vendors. Certain products (typically staple foods such as bread, milk and sugar) are very occasionally sold as loss leaders so as to attract shoppers to their store. Supermarkets make up for their low margins by a high volume of sales, and with of higher-margin items bought by the attracted shoppers. Self-service with shopping carts (trolleys) or baskets reduces labor costs, and many supermarket chains are attempting further reduction by shifting to self-service check-out.
+         </p>
+    
+          </fieldset>
 
-           <label for="address">Address: </label>
-           <textarea name="address" id="address" cols="20" rows="3"></textarea> <br>
 
-           </fieldset>
+
+
+
+
+
+
            <label for="">Interests</label>
            <br>
-           <label for="html">HTML</label>
-           <input type="checkbox" name="html" id="html" value="html" checked="html">
+           <label for="phone club">Phone Club</label>
+           <input type="checkbox" name="phone club" id="phone club" value="phone club" ><br>
+           <img src="../shop/image/Samsung Galaxy A10.jpg" alt="" width="100" height="100"><br>
+        
 
-           <label for="css">CSS</label>
-           <input type="checkbox" name="css" id="css" value="css" checked="css">
 
-           <label for="js">JS</label>
-           <input type="checkbox" name="js" id="js" value="js" checked="js"><br>
+
+           <label for="css">Cloth</label>
+           <input type="checkbox" name="css" id="css" value="css" ><br>
+           <img src="../shop/image/Bulk T shirt.jpg" alt="" width="100" height="100"><br>
+
+           <label for="js">Food</label>
+           <input type="checkbox" name="js" id="js" value="js" ><br>
+           <img src="../shop/image/S-1.jpg" alt="" width="100" height="100"><br>
            
            
            <label for="">Gender</label><br>
@@ -85,15 +108,7 @@
            <input type="radio" name="other" id="other" value="other"><br>
 
 
-           <label for="city">City</label>
-           <select name="city" id="city" multiple="multiple">
-<option value="0">Choose City</option>
-<option value="1">Yangon</option>
-<option value="2" selected="selected">Mandalay</option>
-<option value="3">Nay Pyi Taw</option>
-
-
-
+           
 
 
 
@@ -107,17 +122,17 @@
            <label for="age">Age</label>
            <input type="number" name="age" id="age" step="2" min="16" max="35">
            
-<label for="height">Height</label>
-<input type="number" name="height" id="height" step="0.001">
+<label for="size">Size</label>
+<input type="number" name="size" id="size" step="0">
 
            
            
            <br>
 
-           <label for="range">Salary Range</label>
-           0<input type="range" name="salary" id="range">100<br>
+           <label for="range">Price Range</label>
+           Ks 100<input type="range" name="salary" id="range">Ks 5,000,000<br>
 
-           <label for="dob">Date Of Birth</label>
+           <label for="dob">Update product</label>
            <input type="date" name="dob" id="dob"><br>
 
            
@@ -136,7 +151,8 @@
             <button>Click Me</button>
         </form>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/_3E4B0rBkYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3BSQ7xnOqnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 </body>
 
 
