@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator</title>
+</head>
+<body>
+    <h3>JS Calculator</h3>
+
+<label for="firstNumber">First Number</label>
+<input type="number" name="firstNumber" id="firstNumber"><br>
+<label for="secondNumber">Second Number</label>
+<input type="number" name="secondNumber" id="secondNumber"><br>
+<button onclick="calculate()">Calculate</button><br>
+<label id="result"></label>
+
+
+
+
+
+
+
+<script>
+
+function calculate(){
+let firstNumber=parseInt(document.querySelector("#firstNumber").value);
+let secondNumber=parseInt(document.querySelector("#secondNumber").value);
+console.log(firstNumber,secondNumber);
+
+
+let sum = firstNumber + secondNumber;
+let sub = firstNumber - secondNumber;
+let mul = firstNumber * secondNumber;
+let div = firstNumber / secondNumber;
+let mod = firstNumber % secondNumber;
+
+
+let result=`Sum: ${sum} <br> Sub: ${sub} <br> Mul: ${mul} <br> Div: ${div.toFixed(2)} <br> Mod: ${mod}<br> `;
+
+
+
+console.log(result);
+
+document.querySelector("#result").innerHTML=result;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+    function calculatByPrompt(){
+// 1=> input
+//request two numbers
+//assigned prompted values to first Number and Second Number
+let firstNumber=parseInt(prompt('Enter first Number!'));
+let secondNumber=parseInt(prompt('Enter second Number!'));
+console.log(firstNumber,secondNumber);
+
+// 2 => process
+// sum sub multi div mod
+
+let sum = firstNumber + secondNumber;
+let sub = firstNumber - secondNumber;
+let mul = firstNumber * secondNumber;
+let div = firstNumber / secondNumber;
+let mod = firstNumber % secondNumber;
+
+
+// 3 => output
+// console the result
+
+console.log(sum,sub,mul,div.toFixed(2),mod)
+
+document.write(`First Number: ${firstNumber}<br>`);
+document.write(`Second Number: ${secondNumber}<br>`);
+document.write(`Sum: ${sum} <br>`);
+document.write(`Sub: ${sub} <br>`);
+document.write(`Mul: ${mul} <br>`);
+document.write(`Div: ${div.toFixed(2)} <br>`);
+document.write(`Mod: ${mod}<br>`);
+
+
+
+
+
+
+
+
+    }
+
+</script>
+
+</body>
+</html>
