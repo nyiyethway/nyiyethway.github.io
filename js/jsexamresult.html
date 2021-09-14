@@ -7,6 +7,116 @@
     <title>Exam</title>
 </head>
 <body>
+    <h3>Exam Result</h3>
+
+
+
+    <label for="subject1">Subject 1</label>
+    <input type="number" name="subject1" id="subject1"><br>
+    <label for="subject2">Subject 2</label>
+    <input type="number" name="subject2" id="subject2"><br>
+    <label for="subject3">Subject 3</label>
+    <input type="number" name="subject3" id="subject3"><br>
+    <button onclick="calculate()">Calculate</button><br>
+    <label id="result"></label>
     
+    
+    
+    
+    
+    
+    
+    <script>
+    
+    function calculate(){
+    let subject1=parseInt(document.querySelector("#subject1").value);
+    let subject2=parseInt(document.querySelector("#subject2").value);
+    let subject3=parseInt(document.querySelector("#subject3").value);
+    console.log(subject1,subject2,subject3);
+    
+    
+    let sum = subject1 + subject2 + subject3;
+    let sub = subject1 - subject2 - subject3;
+    let mul = subject1 * subject2 * subject3;
+    let div = subject1 / subject2 / subject3;
+    let mod = subject1 % subject2 % subject3;
+    
+    let result=`Sum: ${sum} <br> Sub: ${sub} <br> Mul: ${mul} <br> Div: ${div.toFixed(2)} <br> Mod: ${mod}<br> `;
+    
+    
+    
+    console.log(result);
+    
+    document.querySelector("#result").innerHTML=result;
+    
+    
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        function calculatByPrompt(){
+    // 1=> input
+    //request two numbers
+    //assigned prompted values to first Number and Second Number
+    let subject1=parseInt(prompt('Enter subject1!'));
+    let subject2=parseInt(prompt('Enter subject2!'));
+    let subject3=parseInt(prompt('Enter subject3!'));
+    console.log(subject1,subject2,subject3);
+    
+    // 2 => process
+    // sum sub multi div mod
+    
+    let sum = subject1 + subject2 + subject3;
+    let sub = subject1 - subject2 - subject3;
+    let mul = subject1 * subject2 * subject3;
+    let div = subject1 / subject2 / subject3;
+    let mod = subject1 % subject2 % subject3;
+    
+    // 3 => output
+    // console the result
+    
+    console.log(sum,sub,mul,div.toFixed(2),mod)
+    
+    document.write(`subject1: ${subject1}<br>`);
+    document.write(`subject2: ${subject2}<br>`);
+    document.write(`Sum: ${sum} <br>`);
+    document.write(`Sub: ${sub} <br>`);
+    document.write(`Mul: ${mul} <br>`);
+    document.write(`Div: ${div.toFixed(2)} <br>`);
+    document.write(`Mod: ${mod}<br>`);
+    
+    
+    
+    
+    
+    
+    
+    
+        }
+    
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
