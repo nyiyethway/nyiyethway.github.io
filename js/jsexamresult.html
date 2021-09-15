@@ -18,7 +18,9 @@
     <label for="subject3">Subject 3</label>
     <input type="number" name="subject3" id="subject3"><br>
     <button onclick="calculate()">Calculate</button><br>
-    <label id="result"></label>
+    <label id="total"></label>
+    <label id="result">Result</label>
+    
     
     
     
@@ -34,6 +36,11 @@
     let subject3=parseInt(document.querySelector("#subject3").value);
     console.log(subject1,subject2,subject3);
     
+    let max=100 ;
+    let min=0
+    if((subject1>=0&&subject1<=max) && (subject2>=0&&subject2<=max) && (subject3>=0&&subject3<=max)){
+
+    
     
     let sum = subject1 + subject2 + subject3;
     let sub = subject1 - subject2 - subject3;
@@ -47,61 +54,32 @@
     
     console.log(result);
     
-    document.querySelector("#result").innerHTML=result;
-    
-    
-    
-    
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        function calculatByPrompt(){
-    // 1=> input
-    //request two numbers
-    //assigned prompted values to first Number and Second Number
-    let subject1=parseInt(prompt('Enter subject1!'));
-    let subject2=parseInt(prompt('Enter subject2!'));
-    let subject3=parseInt(prompt('Enter subject3!'));
-    console.log(subject1,subject2,subject3);
-    
-    // 2 => process
-    // sum sub multi div mod
-    
-    let sum = subject1 + subject2 + subject3;
-    let sub = subject1 - subject2 - subject3;
-    let mul = subject1 * subject2 * subject3;
-    let div = subject1 / subject2 / subject3;
-    let mod = subject1 % subject2 % subject3;
-    
-    // 3 => output
-    // console the result
-    
-    console.log(sum,sub,mul,div.toFixed(2),mod)
-    
-    document.write(`subject1: ${subject1}<br>`);
-    document.write(`subject2: ${subject2}<br>`);
-    document.write(`Sum: ${sum} <br>`);
-    document.write(`Sub: ${sub} <br>`);
-    document.write(`Mul: ${mul} <br>`);
-    document.write(`Div: ${div.toFixed(2)} <br>`);
-    document.write(`Mod: ${mod}<br>`);
-    
-    
-    
-    
-    
-    
-    
-    
+    document.querySelector("#total").innerHTML=result;
+
+    let examResult='';
+    if(subject1>=40 && subject2>=40 && subject3>=40){
+    examResult='Pass!' ;
+    if(subject1>=80 || subject2>=80 || subject3>=80 ){
+        examResult='Pass with Distinction!' ;
+    } 
+}else{
+    examResult='Fail' ;
+}
+
+    document.querySelector("#result").innerHTML=examResult;
+}else{
+
+    alert('Please enter marks value in 0 to 100!');
+            }
         }
+
+
+    
+        
+    
+    
+    
+        
     
     </script>
 
