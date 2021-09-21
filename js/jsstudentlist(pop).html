@@ -35,13 +35,12 @@
 
 
           let studentlist=[]
-         
+          let html=''
           let i = 1
 
           
             
             function register(){
-                let html=''
                 let name=document.querySelector("#name").value
                 let city=document.querySelector("#city").value
 
@@ -87,7 +86,7 @@
                 )
                 
                 document.querySelector("#studentlist").innerHTML=html
-                
+                console.log(studentlist.pop());
           
            }
           
